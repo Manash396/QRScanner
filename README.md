@@ -33,7 +33,7 @@ A modern **QR Code Scanner** Android app built using **CameraX**, **Google ML Ki
 ## 📸 Screenshots
 
 | QR Preview | WebView Load |
-|------------|--------------|------------------------|
+|------------|--------------|
 | ![preview](screenshots/preview.png) | ![web](screenshots/web.png) |
 
 ---
