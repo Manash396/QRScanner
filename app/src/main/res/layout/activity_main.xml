@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QRScanner"
+        android:textSize="25sp"
+        android:padding="5dp"
+        />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:visibility="visible"
+            app:implementationMode="performance"
+            />
+
+                 <WebView
+                     android:id="@+id/webView"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:visibility="gone" />
+
+
+             <!-- Add any other views here like TextViews, Buttons, etc -->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingBottom="6dp"
+            style="@style/Widget.MaterialComponents.BottomAppBar"
+            app:hideOnScroll="true"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabAlignmentMode="center"
+            app:fabCradleVerticalOffset="10dp"
+            app:fabAnimationMode="slide"
+            app:navigationIcon="@drawable/baseline_qr_code_scanner_24"
+            />
+
+        
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="fab"
+            app:srcCompat="@drawable/baseline_photo_camera_24"
+            app:layout_anchor="@+id/bottomAppBar"
+            />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>
